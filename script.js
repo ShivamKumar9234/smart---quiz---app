@@ -1,6 +1,6 @@
 // ADD YOUR API KEY HERE
-const part1 = "AIzaSyADps"; 
-const part2 = "5peWG3klKekCpJwaqQqeBfLt0W0-Q"; 
+const part1 = "AIzaSyCP"
+const part2 = "6UJRiyuRMVxkpiX2mGdo2kX3gqAQVqk"; 
 const API_KEY = part1 + part2;
 let currentQuestionIndex = 0;
 let score = 0;
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', displayHistory);
 // Handle form submission
 document.querySelector('form').addEventListener('submit', async function(event) {
     event.preventDefault(); 
+    console.log("Generate button Clicked!");
 
     currentTopic = document.getElementById('topic').value;
     const numQuestions = document.getElementById('numQuestions').value;
