@@ -1,5 +1,5 @@
 // ADD YOUR API KEY HERE
-const API_KEY = 'AIzaSyDuNG46U3xbPiqb8GSyxNwaD2Vds3F0Dsg'; 
+const API_KEY = ''; 
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -406,5 +406,6 @@ function displayHistory() {
     }
 
 }
+
 
 
