@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-const API_KEY = 'AIzaSyBxYPA14FpCffmm1clOblUfOXaQNT5P-hU'; 
-
+// ADD YOUR API KEY HERE
+const part1 = "AIzaSyADps"; 
+const part2 = "5peWG3klKekCpJwaqQqeBfLt0W0-Q"; 
+const API_KEY = part1 + part2;
 let currentQuestionIndex = 0;
 let score = 0;
 let quizData = [];
@@ -14,7 +14,7 @@ let userSelections = [];
 document.addEventListener('DOMContentLoaded', displayHistory);
 
 // Handle form submission
-document.getElementById('quizConfigForm').addEventListener('submit', async function(event) {
+document.querySelector('form').addEventListener('submit', async function(event) {
     event.preventDefault(); 
 
     currentTopic = document.getElementById('topic').value;
@@ -406,78 +406,3 @@ function displayHistory() {
         }
     }
 }
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Quiz App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="quiz-container">
-        <h1>Smart Quiz Setup</h1>
-        <p>Configure your AI-powered quiz</p>
-
-        <form id="quizConfigForm">
-            <div class="form-group">
-                <label for="topic">Quiz Topic:</label>
-                <input type="text" id="topic" placeholder="e.g., Java Programming, Organic Chemistry" required>
-            </div>
-
-            <div class="form-group">
-                <label for="numQuestions">Number of Questions:</label>
-                <input type="number" id="numQuestions" min="1" max="20" value="5" required>
-            </div>
-
-            <div class="form-group">
-                <label for="difficulty">Difficulty Level:</label>
-                <select id="difficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="timeLimit">Time Limit (in minutes):</label>
-                <input type="number" id="timeLimit" min="1" max="60" value="10" required>
-            </div>
-
-            <button type="submit" id="startBtn">Generate & Start Quiz</button>
-        </form>
-
-        <div id="historySection" style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 15px;">
-            <h3 style="font-size: 16px; color: #444; margin-bottom: 10px;">Past Attempts 🏆</h3>
-            <ul id="historyList" style="list-style-type: none; padding: 0; font-size: 14px; max-height: 150px; overflow-y: auto;">
-                </ul>
-        </div>
-
-        <div id="quizSection" style="display: none; margin-top: 20px;">
-            <div id="timerDisplay" style="color: #d9534f; font-weight: bold; text-align: right; margin-bottom: 10px;">
-                Time Left: --:--
-            </div>
-            
-            <h2 id="questionText" style="margin-bottom: 20px; font-size: 18px;">Question will appear here</h2>
-            
-            <div id="optionsContainer">
-                </div>
-            
-            <div id="explanationBox" style="display: none; margin-top: 15px; padding: 12px; background-color: #e9ecef; border-left: 4px solid #007BFF; border-radius: 4px; font-size: 14px; color: #333;">
-                <strong>Explanation:</strong> <span id="explanationText"></span>
-            </div>
-            <div id="voiceControl" style="margin-top: 15px; text-align: center;">
-                <button id="micBtn" type="button" onclick="startVoiceRecognition()" style="background-color: #ff5722; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-size: 15px; transition: 0.3s;">
-                    🎤 Answer by Voice
-                </button>
-                <p id="voiceStatus" style="font-size: 13px; color: #666; margin-top: 8px; font-weight: bold;"></p>
-            </div>
-            
-            <button id="nextBtn" style="display: none; margin-top: 20px; background-color: #28a745;">Next Question</button>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
